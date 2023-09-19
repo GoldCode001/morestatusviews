@@ -37,6 +37,15 @@ hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
+            /* Change the background color of the button */
+            .stSidebar button.stButton {
+                background-color: #FF5733;
+            }
+
+            /* Change the color of the button's icon (hamburger icon) */
+            .stSidebar button.stButton span::before {
+                color: #FFFFFF;
+            }
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
