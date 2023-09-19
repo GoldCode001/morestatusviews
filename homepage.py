@@ -153,7 +153,7 @@ def main():
                     st.text("")  # Add an empty line for visual separation
 
                     # Add a delay (e.g., 5 seconds) before the automatic redirect
-                    delay_second = 1
+                    delay_seconds = 1
                     
                     # Display a message to inform the user about the redirection
                     st.write(f"Redirecting to {redirect_url} in {delay_seconds} second...")
