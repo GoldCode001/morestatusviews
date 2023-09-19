@@ -5,6 +5,7 @@ import vobject
 import webbrowser
 from datetime import datetime
 from streamlit_lottie import st_lottie
+from streamlit_option_menu import option_menu
 import requests
 import requests.exceptions
 
@@ -89,16 +90,19 @@ def main():
     
 
     # Create navigation menu
-    menu = ["Home", "Download Vcf", "Website developer", "Privacy policy"]
-    choice = st.sidebar.radio ("Menu", menu)
+    selected = option_menu(
+        menu_title =None,
+        options = ["Home", "Download Vcf", "Website developer", "Privacy policy"],
+        icons=["house", "download", "laptop"],
+        orientation="horizontal",
+    )
 
     # Place the menu at the top of the page
     st.markdown(
         """
         <style>
-        .sidebar .sidebar-content {
-            padding-top: 20px;
-        }
+    
+    
 
         #MainMenu {visibility: hidden;}
         footer {visibility: hidden;}
