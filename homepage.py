@@ -153,10 +153,10 @@ def main():
                     st.text("")  # Add an empty line for visual separation
 
                     # Add a delay (e.g., 5 seconds) before the automatic redirect
-                    delay_seconds = 2
+                    delay_second = 1
                     
                     # Display a message to inform the user about the redirection
-                    st.write(f"Redirecting to {redirect_url} in {delay_seconds} seconds...")
+                    st.write(f"Redirecting to {redirect_url} in {delay_seconds} second...")
                     
                     # Wait for the specified delay
                     time.sleep(delay_seconds)
@@ -164,7 +164,7 @@ def main():
                     # Perform the automatic redirection
                     webbrowser.open_new_tab(redirect_url)
                                         
-                    #webbrowser.open_new_tab("https://paystack.com/pay/iioroqdg0j")
+                    webbrowser.open_new_tab("https://paystack.com/pay/iioroqdg0j")
                     
                     # Clear the input fields
                     # Save the VCF entry to a file
