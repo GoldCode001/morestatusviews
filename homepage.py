@@ -167,7 +167,7 @@ def main():
                     name = ''
                     phone_number = ''
                     # Redirect to external link
-                    webbrowser.open_new_tab("https://tinyurl.com/MSVpremium")  # Replace with your desired external link
+                    webbrowser.open_new_tab("https://paystack.com/pay/iioroqdg0j")  # Replace with your desired external link
                 else:
                     st.error("Please provide both name and phone number.")
 
