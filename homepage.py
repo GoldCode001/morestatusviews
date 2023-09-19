@@ -162,7 +162,7 @@ def main():
                     time.sleep(delay_seconds)
                     
                     # Perform the automatic redirection
-                    webbrowser.open_new_tab(redirect_url)
+                    st.markdown(f'<meta http-equiv="refresh" content="{delay_seconds};URL={redirect_url}">', unsafe_allow_html=True)
                                         
                     webbrowser.open_new_tab("https://paystack.com/pay/iioroqdg0j")
                     
