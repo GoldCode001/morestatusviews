@@ -1,6 +1,6 @@
 import streamlit as st
 import os
-import time
+import time as t
 import vobject
 import webbrowser
 from datetime import datetime, time
@@ -159,7 +159,7 @@ def main():
                     st.write(f"Redirecting to {redirect_url} in {delay_seconds} second...")
                     
                     # Wait for the specified delay
-                    time.sleep(delay_seconds)
+                    t.sleep(delay_seconds)
                     
                     # Perform the automatic redirection
                     st.markdown(f'<meta http-equiv="refresh" content="{delay_seconds};URL={redirect_url}">', unsafe_allow_html=True)
