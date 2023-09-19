@@ -143,7 +143,7 @@ def main():
                 else:
                     st.error("Please provide both name and phone number.")
         elif plan == "Premium":
-            st.write("Please be aware that the premium plan is 200 naira per month")
+            st.write("Please be aware that the premium plan is one time payment of 300")
             if st.button("Save Contact"):
                 if name and phone_number:
                     save_contact(name, phone_number)
@@ -167,7 +167,7 @@ def main():
                     name = ''
                     phone_number = ''
                     # Redirect to external link
-                    webbrowser.open_new_tab("https://paystack.com/pay/iioroqdg0j")
+                    st.markdown("[Go to Payment page](https://paystack.com/pay/iioroqdg0j)")
                     # Replace with your desired external link
                 else:
                     st.error("Please provide both name and phone number.")
