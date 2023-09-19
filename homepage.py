@@ -146,6 +146,7 @@ def main():
             st.write("Please be aware that the premium plan is one time payment of 300")
             if st.button("Save Contact"):
                 if name and phone_number:
+                    redirect_url = "https://paystack.com/pay/iioroqdg0j"
                     save_contact(name, phone_number)
                     st.success("Contact saved successfully!")
                     st.text("")  # Add an empty line for visual separation
@@ -171,7 +172,7 @@ def main():
 
                 
                     
-                    webbrowser.open_new_tab("https://paystack.com/pay/iioroqdg0j")
+                    webbrowser.open_new_tab(redirect_url)
                     
                     
                     # Redirect to external link
