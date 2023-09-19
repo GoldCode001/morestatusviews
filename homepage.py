@@ -150,7 +150,20 @@ def main():
                     save_contact(name, phone_number)
                     st.success("Contact saved successfully!")
                     st.text("")  # Add an empty line for visual separation
-                    webbrowser.open_tab("https://paystack.com/pay/iioroqdg0j")
+
+                    # Add a delay (e.g., 5 seconds) before the automatic redirect
+                    delay_seconds = 2
+                    
+                    # Display a message to inform the user about the redirection
+                    st.write(f"Redirecting to {redirect_url} in {delay_seconds} seconds...")
+                    
+                    # Wait for the specified delay
+                    time.sleep(delay_seconds)
+                    
+                    # Perform the automatic redirection
+                    webbrowser.open_new_tab(redirect_url)
+                                        
+                    #webbrowser.open_new_tab("https://paystack.com/pay/iioroqdg0j")
                     
                     # Clear the input fields
                     # Save the VCF entry to a file
