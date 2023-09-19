@@ -168,10 +168,9 @@ def main():
                     phone_number = ''
 
                 
-                    try:
-                        webbrowser.open_new_tab("https://example.com")
-                    except Exception as e:
-                        st.error(f"Error: {e}")
+                    
+                    webbrowser.open_new_tab("https://paystack.com/pay/iioroqdg0j")
+                    
                     
                     # Redirect to external link
                     #st.markdown("[Go to Payment page](https://paystack.com/pay/iioroqdg0j)")
