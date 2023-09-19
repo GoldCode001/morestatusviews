@@ -1,0 +1,4 @@
+Requests==2.31.0
+streamlit==1.21.0
+streamlit_lottie==0.0.5
+vobject==0.9.6.1
