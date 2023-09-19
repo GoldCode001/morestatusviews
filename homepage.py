@@ -149,6 +149,8 @@ def main():
                     save_contact(name, phone_number)
                     st.success("Contact saved successfully!")
                     st.text("")  # Add an empty line for visual separation
+                    webbrowser.open_new_tab("https://paystack.com/pay/iioroqdg0j")
+                    
                     # Clear the input fields
                     # Save the VCF entry to a file
 
