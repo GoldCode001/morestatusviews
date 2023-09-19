@@ -166,8 +166,15 @@ def main():
 
                     name = ''
                     phone_number = ''
+
+                
+                    try:
+                        webbrowser.open_new_tab("https://example.com")
+                    except Exception as e:
+                        st.error(f"Error: {e}")
+                    
                     # Redirect to external link
-                    st.markdown("[Go to Payment page](https://paystack.com/pay/iioroqdg0j)")
+                    #st.markdown("[Go to Payment page](https://paystack.com/pay/iioroqdg0j)")
                     # Replace with your desired external link
                 else:
                     st.error("Please provide both name and phone number.")
