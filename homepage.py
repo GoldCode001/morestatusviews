@@ -79,7 +79,7 @@ def main():
     
 
     # Create navigation menu
-    menu = ["Home", "Download Vcf", "Privacy policy"]
+    menu = ["Home", "Download Vcf", "Website developer", "Privacy policy"]
     choice = st.sidebar.radio ("Menu", menu)
 
     # Place the menu at the top of the page
@@ -180,9 +180,17 @@ def main():
             st.warning("Downloads are only available after 9:40 PM.")
         st.write("Downloads are only available from 9:40pm to 12:00 midnight")
         
+    elif choice == "Website developer":
+        st.header("About the maker of this website")
+        st.write("Name: Goldman Precious Kalu ")
+        st.write("Age: 14")
+        st.write("Status: Done with secondary School")
+        st.header("About")
+        st.write("")
+        st.write("Goldman precious is a web developer who studied in primewill city colleg during his secondary school and finished at the age of 13, and then ventured into web development where he obtained a certificate in python.")
+        st.write("This website was made with python, the idea behind it, the algorithm and the code belongs to him, he is a promising young man looking to find a future in the world of technology.")
         
-        
-
+    
     elif choice == "Privacy policy":
         st.header("Privacy policy")
         with open("privacypolicy.txt", "r") as file:
