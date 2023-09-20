@@ -21,7 +21,13 @@ st.image(featured_image, use_column_width=True)  # Use use_column_width=True to 
 st.title("Get more Whatsapp Status viewers easily")
 st.image(featured_image, use_column_width=True)
 
-
+# Add a custom favicon to your Streamlit app
+st.markdown(
+    """
+    <link rel="shortcut icon" href="favicon.ico">
+    """,
+    unsafe_allow_html=True
+)
 
 def main():
     try:
