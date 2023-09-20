@@ -8,6 +8,15 @@ from streamlit_lottie import st_lottie
 from PIL import Image
 import requests
 import requests.exceptions
+# Import the Streamlit caching decorator
+from streamlit.hashing import _CodeHasher
+
+# Create a custom hash function for caching
+def custom_cache_key(*args, **kwargs):
+    return _CodeHasher(*args, **kwargs).digest()
+
+# Add caching to your Streamlit app
+@st.cache(allow_output_mutation=True, hash_funcs={"__main__.custom_cache_key": custom_cache_key})
 
 # Set Open Graph metadata for the featured image
 st.markdown(f'<meta property="og:image" content="https://bopmovies.com/wp-content/uploads/2023/09/Whatsapp-scaled.jpg">', unsafe_allow_html=True)
@@ -95,6 +104,8 @@ def get_contact_count():
             return count
     else:
         return 0
+# Add caching to the function
+get_contact_count_cached = st.cache(get_contact_count)
 
 def is_download_allowed():
     current_time = datetime.now().time()
@@ -216,10 +227,9 @@ def main():
                 else:
                     st.error("Please provide both name and phone number.")
 
-        # Display contact count
-        contact_count = get_contact_count()
-        #st.header("Compiled Contacts")
-        st.write(str(contact_count) +" compiled contacts today")
+        # Display contact count using the cached function
+        contact_count = get_contact_count_cached()
+        st.write(str(contact_count) + " compiled contacts today")
 
 
     elif choice == "Download Vcf":
