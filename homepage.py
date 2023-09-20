@@ -5,7 +5,7 @@ import vobject
 import webbrowser
 from datetime import datetime, time
 from streamlit_lottie import st_lottie
-from PIL inmport Image
+from PIL import Image
 import requests
 import requests.exceptions
 
