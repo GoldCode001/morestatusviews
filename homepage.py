@@ -18,7 +18,7 @@ st.image(featured_image, use_column_width=True)  # Use use_column_width=True to 
 
 # Add a title above the featured image
 st.title("Get more Whatsapp Status viewers easily")
-st.image(use_column_width=True)
+st.image(featured_image, use_column_width=True)
 
 
 
