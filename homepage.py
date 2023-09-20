@@ -35,7 +35,7 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-@st.cache(persist=True)
+@st.cache_data(persist=True)
 def count_contacts():
     if os.path.exists('contacts.vcf'):
         with open('contacts.vcf', 'r') as file:
@@ -240,7 +240,6 @@ def main():
         # Display the count of compiled contacts today using the cached function
         contact_count = count_contacts()
         st.write(f"Compiled contacts today: {contact_count}")
-
 
     elif choice == "Download Vcf":
         st_lottie(lottie_coding2, height=400, key="coding")
