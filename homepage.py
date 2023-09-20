@@ -5,8 +5,22 @@ import vobject
 import webbrowser
 from datetime import datetime, time
 from streamlit_lottie import st_lottie
+from PIL inmport Image
 import requests
 import requests.exceptions
+
+
+# Load your featured image
+featured_image = Image.open('path_to_your_image.jpg')  # or use an online URL
+
+# Display the image on your Streamlit app
+st.image(featured_image, use_column_width=True)  # Use use_column_width=True to make it responsive
+
+# Add a title above the featured image
+st.title("Get more Whatsapp Status viewers easily")
+st.image(featured_image, use_column_width=True)
+
+
 
 def main():
     try:
