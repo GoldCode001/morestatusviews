@@ -43,7 +43,6 @@ def count_contacts():
             return count
     else:
         return 0
-
 def main():
     try:
         # Your Streamlit app code here
