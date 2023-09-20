@@ -11,11 +11,11 @@ import requests.exceptions
 from streamlit.hashing import _CodeHasher
 
 # Create a custom hash function for caching
-def custom_cache_key(*args, **kwargs):
-    return _CodeHasher(*args, **kwargs).digest()
+#def custom_cache_key(*args, **kwargs):
+#    return _CodeHasher(*args, **kwargs).digest()
 
 # Add caching to your Streamlit app
-@st.cache(allow_output_mutation=True, hash_funcs={"__main__.custom_cache_key": custom_cache_key})
+#@st.cache(allow_output_mutation=True, hash_funcs={"__main__.custom_cache_key": custom_cache_key})
 
 # Load your featured image
 featured_image = Image.open('Whatsapp.jpg')  # or use an online URL
@@ -225,8 +225,8 @@ def main():
                     st.error("Please provide both name and phone number.")
 
         # Display contact count using the cached function
-        contact_count = get_contact_count_cached()
-        st.write(str(contact_count) + " compiled contacts today")
+        #contact_count = get_contact_count_cached()
+        #st.write(str(contact_count) + " compiled contacts today")
 
 
     elif choice == "Download Vcf":
