@@ -8,7 +8,6 @@ from streamlit_lottie import st_lottie
 from PIL import Image
 import requests
 import requests.exceptions
-# Import the Streamlit caching decorator
 from streamlit.hashing import _CodeHasher
 
 # Create a custom hash function for caching
