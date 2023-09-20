@@ -8,7 +8,7 @@ from streamlit_lottie import st_lottie
 from PIL import Image
 import requests
 import requests.exceptions
-from streamlit.hashing import _CodeHasher
+#from streamlit.hashing import _CodeHasher
 
 # Create a custom hash function for caching
 #def custom_cache_key(*args, **kwargs):
