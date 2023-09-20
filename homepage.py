@@ -239,7 +239,7 @@ def main():
         contact_data = read_contacts()
         if contact_data:
             st.write("Compiled contacts today:")
-            st.text(contact_count)
+            st.text(get_contact_count)
 
 
     elif choice == "Download Vcf":
