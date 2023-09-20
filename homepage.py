@@ -11,7 +11,7 @@ import requests.exceptions
 
 
 # Load your featured image
-featured_image = Image.open('path_to_your_image.jpg')  # or use an online URL
+featured_image = Image.open('Whatsapp.jpg')  # or use an online URL
 
 # Display the image on your Streamlit app
 st.image(featured_image, use_column_width=True)  # Use use_column_width=True to make it responsive
