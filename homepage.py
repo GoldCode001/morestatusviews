@@ -24,7 +24,7 @@ st.image(featured_image, use_column_width=True)
 # Add a custom favicon to your Streamlit app
 st.markdown(
     """
-    <link rel="shortcut icon" href="morestatusviews/favicon.ico">
+    <link rel="shortcut icon" href="./favicon.ico">
     """,
     unsafe_allow_html=True
 )
