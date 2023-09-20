@@ -99,6 +99,7 @@ def save_contact(name, phone_number):
 
     contact.add('tel')
     contact.tel.value = phone_number
+    print(contact)
 
     with open('contacts.vcf', 'a') as file:
         file.write(contact.serialize())
