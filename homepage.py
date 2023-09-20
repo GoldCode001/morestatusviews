@@ -35,6 +35,14 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+@st.cache(persist=True)
+def read_contacts():
+    if os.path.exists('contacts.vcf'):
+        with open('contacts.vcf', 'r') as file:
+            return file.read()
+    else:
+        return None
+
 def main():
     try:
         # Your Streamlit app code here
@@ -227,6 +235,11 @@ def main():
         # Display contact count using the cached function
         #contact_count = get_contact_count_cached()
         #st.write(str(contact_count) + " compiled contacts today")
+            # Display contact count using the cached function
+            contact_data = read_contacts()
+            if contact_data:
+                st.write("Compiled contacts today:")
+                st.text(contact_data)
 
 
     elif choice == "Download Vcf":
