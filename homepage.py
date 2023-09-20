@@ -18,9 +18,6 @@ def custom_cache_key(*args, **kwargs):
 # Add caching to your Streamlit app
 @st.cache(allow_output_mutation=True, hash_funcs={"__main__.custom_cache_key": custom_cache_key})
 
-# Set Open Graph metadata for the featured image
-og_image_url = "https://bopmovies.com/wp-content/uploads/2023/09/Whatsapp-scaled.jpg"
-st.markdown(f'<meta property="og:image" content="{og_image_url}">', unsafe_allow_html=True)
 # Load your featured image
 featured_image = Image.open('Whatsapp.jpg')  # or use an online URL
 
