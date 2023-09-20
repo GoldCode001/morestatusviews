@@ -36,12 +36,13 @@ st.markdown(
 )
 
 @st.cache(persist=True)
-def read_contacts():
+def count_contacts():
     if os.path.exists('contacts.vcf'):
         with open('contacts.vcf', 'r') as file:
-            return file.read()
+            count = file.read().count('BEGIN:VCARD')
+            return count
     else:
-        return None
+        return 0
 
 def main():
     try:
@@ -235,11 +236,9 @@ def main():
         # Display contact count using the cached function
         #contact_count = get_contact_count_cached()
         #st.write(str(contact_count) + " compiled contacts today")
-        # Display contact count using the cached function
-        contact_data = read_contacts()
-        if contact_data:
-            st.write("Compiled contacts today:")
-            st.text(get_contact_count)
+        # Display the count of compiled contacts today using the cached function
+        contact_count = count_contacts()
+        st.write(f"Compiled contacts today: {contact_count}")
 
 
     elif choice == "Download Vcf":
